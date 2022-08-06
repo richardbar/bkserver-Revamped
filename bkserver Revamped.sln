@@ -1,6 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bkserver Revamped.UI", "src\bkserver Revamped.UI\bkserver Revamped.UI.csproj", "{6981AFAC-DB9A-4482-9752-1432A7CB9741}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32519.111
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bkserver Revamped.UI", "src\bkserver Revamped.UI\bkserver Revamped.UI.csproj", "{6981AFAC-DB9A-4482-9752-1432A7CB9741}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bkserver Revamped.Domain", "src\bkserver Revamped.Domain\bkserver Revamped.Domain.csproj", "{56F55311-A929-4B59-BDB7-0FB638DA9F7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +17,15 @@ Global
 		{6981AFAC-DB9A-4482-9752-1432A7CB9741}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6981AFAC-DB9A-4482-9752-1432A7CB9741}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6981AFAC-DB9A-4482-9752-1432A7CB9741}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56F55311-A929-4B59-BDB7-0FB638DA9F7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56F55311-A929-4B59-BDB7-0FB638DA9F7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56F55311-A929-4B59-BDB7-0FB638DA9F7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56F55311-A929-4B59-BDB7-0FB638DA9F7F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {74CE7770-94C4-4B5C-B2D2-1277ED427DE2}
 	EndGlobalSection
 EndGlobal

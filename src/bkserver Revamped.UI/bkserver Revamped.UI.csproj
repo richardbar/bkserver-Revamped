@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
 		<LangVersion>10</LangVersion>
@@ -6,4 +6,8 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<RootNamespace>bkserver</RootNamespace>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\bkserver Revamped.Domain\bkserver Revamped.Domain.csproj" />
+	</ItemGroup>
 </Project>
