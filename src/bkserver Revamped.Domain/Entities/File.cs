@@ -10,7 +10,7 @@ public class File
 
     public FileSize Size { get; init; }
 
-    public FileLastModified LastModified { get; init; }
+    public LastModified LastModified { get; init; }
 
     public File(FileInfo fileInfo)
     {
@@ -22,7 +22,7 @@ public class File
         Id = FileId.From(Guid.NewGuid());
         Name = FileName.From(fileInfo.Name);
         Size = FileSize.From(fileInfo.Length);
-        LastModified = FileLastModified.From(fileInfo.LastWriteTimeUtc);
+        LastModified = LastModified.From(fileInfo.LastWriteTimeUtc);
     }
 
     public File(string fileName)
@@ -36,6 +36,6 @@ public class File
         Id = FileId.From(Guid.NewGuid());
         Name = FileName.From(fileInfo.Name);
         Size = FileSize.From(fileInfo.Length);
-        LastModified = FileLastModified.From(fileInfo.LastWriteTimeUtc);
+        LastModified = LastModified.From(fileInfo.LastWriteTimeUtc);
     }
 }
