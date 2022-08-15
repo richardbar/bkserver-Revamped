@@ -42,7 +42,7 @@
         @foreach (File file in Model.Files)
         {
             <tr>
-                <th scope="row">@file.Name</th>
+                <th scope="row"><a asp-controller="Browse" asp-action="DownloadFile" asp-route-directory="@($"{basePath}/{file.Name}")">@file.Name</a></th>
                 <td>@file.Size.GetHumanReadableFileSize()</td>
                 <td>@file.LastModified</td>
             </tr>

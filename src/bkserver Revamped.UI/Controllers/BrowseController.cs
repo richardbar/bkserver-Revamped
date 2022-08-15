@@ -31,4 +31,12 @@ public sealed class BrowseController : Controller
         
         return View(directoryInfo.GetFolderContent());
     }
+
+    public FileResult DownloadFile(DownloadFileRequest request)
+    {
+        return File(new FileStream($"{_baseDirectory}{request.Directory}", FileMode.Open, FileAccess.Read),
+            "application/force-download",
+            Path.GetFileName(request.Directory),
+            true);
+    }
 }
