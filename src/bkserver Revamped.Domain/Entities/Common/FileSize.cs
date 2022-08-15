@@ -2,7 +2,7 @@
 
 namespace bkserver.Domain.Entities.Common;
 
-public sealed class FileSize : ValueOf<long, FileSize>
+public class FileSize : ValueOf<long, FileSize>
 {
     protected override void Validate()
     {
