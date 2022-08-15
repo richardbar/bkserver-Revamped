@@ -1,0 +1,51 @@
+﻿@using bkserver.Domain.Entities
+@using bkserver.Domain.Extensions.bkserver.Domain.Entities.Common
+
+@model FolderContent
+
+@{
+    ViewData["Title"] = "Browse Files";
+
+    string basePath = Context.Request.Query["Path"];
+    if (string.IsNullOrWhiteSpace(basePath))
+        basePath = "";
+    if (basePath.EndsWith('/'))
+        basePath = basePath.Remove(basePath.Length - 1);
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Size</th>
+            <th scope="col">Last Modified</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (basePath != "")
+        {
+            <tr>
+                <th scope="row"><a asp-controller="Browse" asp-action="Index" asp-route-path="@basePath.Substring(0, basePath.LastIndexOf("/"))">..</a></th>
+                <td>Folder</td>
+                <td></td>
+            </tr>
+        }
+
+        @foreach (Folder folder in Model.Folders)
+        {
+            <tr>
+                <th scope="row"><a asp-controller="Browse" asp-action="Index" asp-route-path="@($"{basePath}/{folder.Name}")">@folder.Name</a></th>
+                <td>Folder</td>
+                <td>@folder.LastModified</td>
+            </tr>
+        }
+        @foreach (File file in Model.Files)
+        {
+            <tr>
+                <th scope="row">@file.Name</th>
+                <td>@file.Size.GetHumanReadableFileSize()</td>
+                <td>@file.LastModified</td>
+            </tr>
+        }
+    </tbody>
+</table>
